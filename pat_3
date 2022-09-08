@@ -1,0 +1,51 @@
+import java.util.*;
+
+class help{
+    int pos,neg,diff;
+
+    void k(int n, int arr[]){
+
+        pos=0; neg=0;
+        for(int i=0; i<n ;i++){
+            if(arr[i] > 0){
+                pos += arr[i];
+            }
+            else{
+                neg += arr[i];
+            }
+        }
+        System.out.println(pos);
+        System.out.println(neg);
+
+        neg = neg*(-1);
+
+        if(pos>neg){
+            System.out.println("positive number");
+            diff = pos - neg;
+            System.out.println(diff);
+        }
+        else{
+            System.out.println("negative number");
+            diff = neg - pos;
+            System.out.println(diff);
+        }
+
+    }
+}
+
+public class rough{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+
+        int n= sc.nextInt();
+        int arr[] = new int[n];
+
+        for(int i=0 ;i<n; i++){
+            arr[i] = sc.nextInt();
+        }
+
+        help h = new help();
+        h.k(n, arr);        
+        
+    }
+}
