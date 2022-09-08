@@ -1,0 +1,74 @@
+IPS-10
+Write a PAC, Pseudocode/Algorithm and a Java program to find the sum and average of even and odd numbers separately.Use user defined CLASS, OBJECT AND METHODS to solve this problem.
+
+For example,if the n value is 5, then if the numbers are 
+
+10
+
+20
+
+30
+
+5
+
+7
+
+then the outputs are 
+
+60.0 (Sum of even nos)
+
+12.0 (Average of even nos)
+
+12.0 (Sum of odd nos)
+
+2.4 (Average of odd nos)
+
+-------------------------------------------------------------------------------------------------------------
+
+import java.util.*;
+
+class evenodd{
+
+    double eavg, oavg,esum,osum;
+    
+    void find(int n , int arr[]){
+    
+        esum=0; osum=0;
+    
+        for(int i=0 ;i<n ;i++){
+            if(arr[i] % 2 == 0){
+                esum += arr[i];
+            }
+            else{
+                osum += arr[i];
+            }
+        }
+        eavg = esum / n;
+        oavg = osum / n;
+        System.out.println(esum);
+        System.out.println(eavg);
+        System.out.println(osum);
+        System.out.println(oavg);
+    }
+    
+}
+
+
+class Main{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        
+        int n;
+        n = sc.nextInt();
+        
+        int arr[] = new int[n];
+        for(int i=0 ;i<n ;i++){
+            arr[i] = sc.nextInt();
+        }
+        
+        evenodd o1 = new evenodd();
+        o1.find(n, arr);
+        
+        
+    }
+}
