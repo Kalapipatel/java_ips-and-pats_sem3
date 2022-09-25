@@ -5,13 +5,15 @@ Write a PAC, Pseudocode/Algorithm and a Java program to read and display an empl
 
 import java.util.*;
 
+
 class Main{
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
-        
+       
         display d = new display();
         d.input();
         d.print();
+        
     }
 }
 
@@ -23,18 +25,22 @@ class read{
     int sal;
     
     void input(){
+        System.out.print("enter th num : ");
         num = sc.nextInt();
+        System.out.print("enter the name : ");
         name = sc.next();
+        System.out.print("enter the sallary : ");
         sal = sc.nextInt();
     }
-    void print(){
-        
-        System.out.println(num);
-        System.out.println(name);
-        System.out.println(sal);
-    }
+    
 }
 
 class display extends read{
-    
+    void print(){
+        
+        System.out.println();
+        System.out.println(this.num);
+        System.out.println(this.name);
+        System.out.println(this.sal);
+    }
 }
