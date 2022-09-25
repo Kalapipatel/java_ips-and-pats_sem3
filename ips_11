@@ -1,0 +1,62 @@
+IPS-11
+Given two positive integers ‘a’ and ‘b’(a<b), Write a PAC, pseudo code/algorithm and a Java program using USER DEFINED CLASS, OBJECT AND METHODS to compute  the squares of all the numbers greater than ‘a’ and less than ‘b’. If a is greater than b , then print "Invalid".Else, perform the above mentioned computation.
+
+Input format:
+
+Enter the number a
+
+Enter the number b
+
+Output format
+
+Print the squares of all the numbers which are greater than a and less than b
+
+Input
+
+5
+
+11
+
+output
+
+36
+
+49
+
+64
+
+81
+
+100
+
+-------------------------------------------------------------------
+
+
+import java.util.*;
+
+class Main{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        
+        square s = new square();
+        s.find(a,b);
+    }
+}
+
+class square{
+    
+    
+    void find(int a, int b){
+        if(a < b){
+            for(int i = 1+a; i<b ; i++){
+                int pow = i*i;
+                System.out.println(pow);
+            }
+        }
+        else{
+            System.out.println("Invalid");
+        }
+    }
+}
