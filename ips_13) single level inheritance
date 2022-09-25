@@ -1,0 +1,40 @@
+IPS-13
+Write a PAC, Pseudocode/Algorithm and a Java program to read and display an employee number, name and salary using single level inheritance.Use suitable methods in both base and derived class to implement the same.
+
+------------------------------------------------------------------------------
+
+import java.util.*;
+
+class Main{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        
+        display d = new display();
+        d.input();
+        d.print();
+    }
+}
+
+class read{
+    
+    Scanner sc = new Scanner(System.in);
+    int num;
+    String name;
+    int sal;
+    
+    void input(){
+        num = sc.nextInt();
+        name = sc.next();
+        sal = sc.nextInt();
+    }
+    void print(){
+        
+        System.out.println(num);
+        System.out.println(name);
+        System.out.println(sal);
+    }
+}
+
+class display extends read{
+    
+}
