@@ -1,0 +1,61 @@
+IPS-15
+Write a PAC, Pseudocode and a Java program to using suitable inheritance for the below problem:
+
+Declare a class "Arithmetic" and classify it into 2 categories namely "Addition" and "Subtraction". Perform the addition and subtraction in the respective classes and display the results.
+
+Use the option 1 for addition and option 2 for subtraction.
+
+Input Format:
+
+Read Case option (1 or 2)
+Read no1
+Read no2
+
+Output format:
+
+Addition or Subtraction value based on the option
+
+----------------------------------------------------------------------------------------------------
+
+import java.util.*;
+
+class Main{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        
+        Add aa = new Add();
+        Sub ss = new Sub();
+        
+        int n = sc.nextInt();
+        int num1 = sc.nextInt();
+        int num2 = sc.nextInt();
+        
+        if(n==1){
+            aa.add(num1, num2);
+        }
+        else{
+            ss.sub(num1, num2);
+        }
+        
+    }
+}
+
+class Arithmetic{
+    int num1,num2;
+}
+
+class Add extends Arithmetic{
+    void add(int a,int b){
+        num1 = a;
+        num2 = b;
+        System.out.println(num1+num2);
+    }
+}
+
+class Sub extends Arithmetic{
+    void sub(int a,int b){
+        num1 = a;
+        num2 = b;
+        System.out.println(num1-num2);
+    }
+}
