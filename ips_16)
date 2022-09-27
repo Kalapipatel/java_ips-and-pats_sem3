@@ -1,0 +1,32 @@
+IPS-16
+Write PAC, pseudocode/algorithm and Java program for the following scenario:
+
+An Employee class has four parameters (name: String, mobile-number: String, year of joining: integer and age: integer) which are initialized using a constructor. This class also has a employeeDisplay() method that prints all these details of an employee.
+
+A Manager class inherits Employee class along with an additional parameter named “department: String”. The constructor of this class initializes its own parameter along with the Employee class parameters using both super() and this. It also has a method named as managerDisplay() that prints all the five parameters of the Manager class. Create an object of the Manager class and print the details of a Manager as explained above.
+
+Input Format:
+
+In the first line, enter the name of the employee
+
+In the second line, enter the mobile number
+
+In the third line, enter the year of joining
+
+In the fourth line, enter the age
+
+In the fifth line, enter the department
+
+ 
+
+Output Format:
+
+Name:<space>name
+
+Mobile Number:<space>mobile-number
+
+Year of Joining:<space>year-of-joining
+
+Age:<space>age
+
+Department:<space>department
