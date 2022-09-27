@@ -23,26 +23,8 @@ Output Format:
 
 Total salary
 
-Input
-basic pay
-choice(1 or 2)
-Output
-total salary (total)
-Processing Involved
-make a class called revised for revised salary calculation
-make 1 method called salary which calculated revised salary of the employee
-give different parameters for function overloading
-then call the function according to cases
+--------------------------------------------------------------------------------------------
 
-relations:
-if case 1 --> then print the salary of project managers
-salary = bp + (bp*agp) + (bp*da) + (bp*hra);
-
-else if case 2 --> then print the salaey of system engineers
-salary = bp + (bp * ta)
-Solution Alternatives
-we can aslo make seprate classes and do the same thing
-Algorithm/ Pseudocode
 pseudocode:
 
 step 1:
@@ -67,19 +49,12 @@ salary = bp + (bp*agp) + (bp*da) + (bp*hra);
 else if case 2 --> then print the salaey of system engineers
 salary = bp + (bp * ta)
 
-step 4:
+step 7:
 display the revised salary
-Font Size
-18
-Language
-Editor Theme 
-Select a Theme
 
 
+--------------------------------------------------------------------------------------------
 
-
-
-Your code has Passed Execution!
 import java.util.*;
 
 class Main{
