@@ -1,0 +1,139 @@
+// Coded on 07/10/22
+ABC car showroom sells various types of cars such as Hatchback, Sedan, SUV and MUV. Due to year end sale, the showroom provides 3%, 5%, 10% and 15% discount for various car models Hatchback, Sedan, SUV and MUV respectively. Also applies 12% of GST for the total amount of purchase Write a java program for the given scenario as follows:
+
+Crate a class Car with some fields (Type, price, extrafitting, gst, discount and NetPrice) and methods such as Read(), Compute() and Display()
+Read() method will read the type, price and extrafitting of the car
+Compute() method will check the type of car and estimate the Net amount to be paid to the showroom. If the type of car is other than Hatchback, Sedan, SUV and MUV then display “Invalid Type”.
+Estimation is done as given below: (For example-if the purchased car is Hatchback)
+    Total=price+extrafitting
+
+    discount=total*0.03           // 0.03 denotes 3% wastage
+
+    gst=(total-discount)*0.12  // 0.12 denotes 12% GST
+
+    net=total-discount+gst
+
+ 
+Sample Input
+
+Hatchback
+
+450000
+
+120000
+
+ 
+
+Sample Output
+
+619248
+
+ 
+
+Sample Input
+
+Truck
+
+1500000
+
+200000
+
+ 
+
+Sample Output
+
+Invalid Type
+
+ 
+
+Sample Input
+
+SUV
+
+1500000
+
+200000
+
+ 
+
+Sample Output
+
+1713600
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+import java.util.*;
+
+class rough {
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
+
+		car c1 = new car();
+		c1.read();
+		c1.compute();
+		c1.display();
+
+	}
+}
+
+class car{
+
+	Scanner sc = new Scanner(System.in);
+
+	String type;
+	int price;
+	int extrafitting;
+	int gst;
+	int discount;
+	int netp;
+
+	void read(){
+		//sc.nextLine();
+		type = sc.nextLine();
+		price = sc.nextInt();
+		extrafitting = sc.nextInt();		
+	}
+
+	void compute(){
+		int total = price + extrafitting;
+		int count = 0;
+
+		// String s1 = "Hatchback";
+		// String s2 = "Sedan";
+		// String s3 = "SUV";
+		// String s4 = "MUV";
+		
+		if(type.equals("Hatchback")){  // we can aslo use s1 
+			discount = (total*3)/100 ;
+			count++;
+		}
+		if(type.equals("Sedan")){
+			discount = (total*5)/100 ;
+			count++;
+		}
+		if(type.equals("SUV")){
+			discount = (total*10)/100;
+			count++;
+		}
+		if(type.equals("MUV")){
+			discount = (total*15)/100;
+			count++;
+		}
+
+
+		if(count != 0){
+		gst =  ((total - discount)*12)/100;
+		netp = total - discount + gst;
+		}
+		else{
+			System.out.println("Invalid Type");
+		}
+	}
+
+	void display(){
+		if(netp != 0)
+		System.out.println(netp);
+	}
+}
