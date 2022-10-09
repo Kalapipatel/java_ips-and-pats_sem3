@@ -42,3 +42,48 @@ then the output matrix is
 567
 
 ------------------------------------------------------------------------------------------
+
+
+import java.util.*;
+
+class Main{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        
+        int r = sc.nextInt();
+        int c = sc.nextInt();
+     
+        int arr[][]= new int[r][c];
+        int sort[] = new int[9];
+        int z=0;
+        
+        if(r == 3 && c == 3){
+        for(int i=0 ;i<3; i++){
+            for(int j=0 ;j<3 ;j++){
+                int a = sc.nextInt();
+                arr[i][j] = a;
+                sort[z] = a;
+                z++;
+            }
+        }
+        
+        Arrays.sort(sort);
+        arr[1][1] = sort[4];
+            
+            
+            for(int i = 0; i<r ;i++){
+                for(int j=0; j<c ;j++){
+                    System.out.print(arr[i][j]);
+                }
+                System.out.println();
+            }
+            
+        }
+        
+        else{
+           System.out.println("invalid");
+        }
+        
+        
+    }
+}
