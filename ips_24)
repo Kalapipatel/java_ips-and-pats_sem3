@@ -24,3 +24,9 @@ Output Format
 New name in which all vowels are replaced with next character.
 
 Count
+
+Input
+rajkumar
+Expected output
+rbjkvmbr
+3
