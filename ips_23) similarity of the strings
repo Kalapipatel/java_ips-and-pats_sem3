@@ -1,0 +1,14 @@
+IPS-23
+You have been assigned to find the addition of similarities of the string with each of its suffixes. Note: Consider the input string is also one of the suffixes.
+
+For example, if the input string is “pqpqpp” then the suffixes of the string are "pqpqpp", "qpqpp", “pqpp", "qpp", " pp" and "p". The similarities of these strings with the string "pqpqpp" are 6,0,3,0,1, & 1 respectively. Therefore, the output should be 6 + 0 + 3 + 0 + 1 + 1 = 11.
+
+Note: For any two strings, S1 and S2, the similarity of the strings is calculated by the length of the longest prefix common to both the strings. For example, the similarity of strings "pqr" and "pqs" is 2, while the similarity of strings "ppp" and "pppq" is 3.
+
+Write a PAC, Pseudocode/Algorithm and Java code to perform the above operation.
+
+Input:
+A string
+
+Output:
+Addition of similarities between a string and suffixes of string
