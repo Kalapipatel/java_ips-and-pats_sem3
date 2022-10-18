@@ -1,0 +1,12 @@
+IPS-27
+Let S be an array of size ‘n’ and elements in S are positive integers . Write a PAC,  algorithm/pseudocode and subsequent Java code to sort the array in increasing order based on the frequency of the values. 
+If two numbers have the same frequency then the smallest number first  followed by other number in the sorted array.  
+For example, Input: S = [1,1,2,2,2,3] and your program produces output: S=[3,1,1,2,2,2]. One more example, your produces output [3,1, 1, 2, 2] 
+if S=[1, 2, 3, 1, 2] .
+
+
+Input
+5
+2 1 2 1 2
+Expected output
+1 1 2 2 2
