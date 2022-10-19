@@ -1,0 +1,79 @@
+IPS-25
+Let A be a two dimensional matirx of size of nxn, write a PAC, pseudocode  and subsequent Java code to display the maximum element of each row and  also minimum element of each column of A.  For example, 
+
+Array of size 3x3
+12	 34	1
+56	23	78
+1	4	90
+The output for the matrix A is
+
+34 78 90
+
+1 4 1
+
+ Input format 
+
+Array size n
+
+Enter the elements in the array nxn
+
+Output format
+
+print the maximum element of each row
+
+print the minimum element of each column
+
+
+Input
+3
+1 2 3
+4 5 6
+7 8 9
+Expected output
+3 6 9 
+1 2 3
+Your Program Output
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+import java.util.*;
+
+class Main{
+    public static void main(String args[]){
+    Scanner sc = new Scanner(System.in);
+    
+    int n = sc.nextInt();
+    int arr[][] = new int[n][n];
+    
+    for(int i=0 ;i<n ;i++){
+        for(int j=0; j<n; j++){
+            arr[i][j] = sc.nextInt();
+        }
+    }
+    
+
+    for(int i=0; i<n ;i++){
+        int max = arr[i][0];
+        for(int j=0 ;j<n; j++){
+            if(arr[i][j] > max){
+                max = arr[i][j];
+            }
+        }
+        System.out.print(max+" ");
+    }
+    System.out.println();
+    
+    for(int i=0; i<n ;i++){
+        int min = arr[0][i];
+        for(int j=0 ;j<n; j++){
+            if(arr[j][i] < min){
+                min = arr[i][j];
+            }
+        }
+        System.out.print(min+" ");
+    }
+    
+    
+    }
+}
