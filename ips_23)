@@ -20,3 +20,61 @@ Input
 rajrajkumar
 Expected output
 15
+
+
+
+============================================================================================================================================================
+
+
+import java.util.*;
+
+class rough2{
+    public static void main(String args[]){
+        Scanner sc  = new Scanner(System.in);
+
+        String s = "rajrajkumar";    // String s = sc.next();
+        int l = s.length();
+        char arr[] = new char[l];
+        int count = 0;
+
+        for(int i =0; i<l ;i++){
+            arr[i] = s.charAt(i);
+        }
+
+        int n = 0;
+        do{
+            System.out.println();
+            System.out.println("new iteration : ");
+            char st[] = new char[l-n];
+
+            int k = 0;
+            for(int i=0; i<(l-n) ; i++){
+                st[i] = arr[k+n];
+                k++;
+            }
+
+            // print the new array ------------------------------
+            for(int i=0; i<(l-n) ; i++){
+                System.out.print(st[i]+" ");
+            }
+            System.out.println();
+            System.out.println("***");
+            // ---------------------------------------------------
+
+            for(int i=0 ;i<(l-n) ;i++){
+                if(s.charAt(i) == st[i]){
+                    count++;
+                }
+                else{
+                    break;
+                }
+                System.out.print(count+" ");
+                
+            }
+            System.out.println("\n-----");
+
+            n++;
+        }while(n<l);
+        System.out.println(count);
+    }
+}
