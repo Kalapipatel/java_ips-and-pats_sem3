@@ -57,17 +57,15 @@ class Main{
             if(arr[i] == k){
             
                 pos += i;
-                
+                flag = 1;
             }
-            else{
-                flag++;
-            }
+            
             
         }
         //System.out.println(pos);
         //System.out.println(flag);
         
-        if(flag == 0){
+        if(flag == 1){
             
             int z = pos+1;
             int arr1[] = new int[z];
