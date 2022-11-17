@@ -1,0 +1,54 @@
+IPS-30
+Given a string, write a PAC, pseudocode/algorithm and the subseqent Java code to replace the vowel characters in the input string with the number '1' and print the new string. Your code should also print the number of vowels that are replaced in the input string. If the input string contains characters other than the alphabetic characters, your code should display : 'invalid input'. The input string may contain lower case characters or upper case charaters or both.
+
+For example:
+
+input :
+
+AeFIoT
+
+output:
+
+11F11T
+
+4
+
+---------------------------------------------------------------------------
+
+import java.util.*;
+
+class Main{
+    public static void main(String argsp[]){
+        Scanner sc = new Scanner(System.in);
+        
+        String s = sc.next();
+        int l = s.length();
+        int count = 0;
+        
+        
+        
+        for(int i=0; i<l ; i++){
+            char c = s.charAt(i);
+            
+        if( (c>='a' && c<='z') || (c>='A' && c<='Z') ){
+                
+            
+            if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u' || c=='A'||c=='E'||c=='I'||c=='O'||c=='U'){
+                System.out.print("1");
+                count ++;
+            }
+            else{
+                System.out.print(c);
+            }
+        }
+        else{
+            System.out.println("invalid input");
+        }
+        
+        }
+        System.out.println("\n"+count);
+        
+        
+        
+    }
+}
