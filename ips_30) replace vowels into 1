@@ -23,7 +23,7 @@ class Main{
         
         String s = sc.next();
         int l = s.length();
-        int count = 0;
+        int count = 0; int k = 0;
         
         
         
@@ -42,11 +42,18 @@ class Main{
             }
         }
         else{
-            System.out.println("invalid input");
+            k++;
         }
         
         }
-        System.out.println("\n"+count);
+        
+        if(k!=0){
+            System.out.println("\ninvalid input");
+        }
+        else{
+            
+            System.out.println("\n"+count);
+        }
         
         
         
